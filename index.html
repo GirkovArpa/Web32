@@ -1,5 +1,9 @@
-<script src="https://unpkg.com/focus-visible@latest/dist/focus-visible.min.js"></script>
+<!--<script src="https://unpkg.com/focus-visible@latest/dist/focus-visible.min.js"></script>-->
 <style>
+  body {
+    background-color: #F0F0F0;
+  }
+
   button {
     width: 100;
     height: 50;
@@ -16,7 +20,7 @@
     border-image-source: url(buttonClick.png);
   }
 
-  *:focus:not(.focus-visible) {
+  /**:focus:not(.focus-visible) {
     outline: none;
   }
 
@@ -25,9 +29,90 @@
     outline-color: black;
     outline-style: dotted;
     outline-offset: -3px;
+  }*/
+
+  /** RADIO */
+
+  /* CUSTOM RADIO & CHECKBOXES
+   http://stackoverflow.com/a/17541916/383904 */
+  .radio {
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+  }
+
+  .radio>input {
+    /* HIDE ORG RADIO & CHECKBOX */
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  /* RADIO & CHECKBOX STYLES */
+  /* DEFAULT <i> STYLE */
+  .radio>i {
+    display: inline-block;
+    vertical-align: middle;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 8px #fff;
+    border: 1px solid gray;
+    background: gray;
+  }
+
+
+  .radio:hover>i {
+    /* HOVER <i> STYLE */
+    border-color: #26A0DA;
+  }
+
+  .radio:hover:checked>i {
+    background: #26A0DA;
+  }
+
+  .radio>input:active+i {
+    border-color: #2C628B;
+  }
+
+  /*.radio>input:active:checked+i {
+    border-color: #2C628B;
+  }*/
+
+  .radio>input:active:checked+i {
+    border-color: #2C628B;
+  }
+
+  .radio>input:checked:not(:active)+i {
+    /* (RADIO CHECKED) <i> STYLE */
+    box-shadow: inset 0 0 0 2px #fff;
+    background: #202020;
+  }
+
+  .radio>input:checked:active+i {
+    box-shadow: inset 0 0 0 2px #fff;
+    background: #2C628B;
+  }
+
+  .radio>input:checked:hover+i {
+    box-shadow: inset 0 0 0 2px #fff;
+    background: #2C628B;
+  }
+
+  .radio>input:checked:hover:not(:active)+i {
+    box-shadow: inset 0 0 0 2px #fff;
+    background: #26A0DA;
   }
 </style>
 
-<button>Hello World!</button>
 
-<button>Click!</button>
+<label class="radio">
+  <input type="radio" name="rad1" value="a">
+  <i></i> Radio 1
+</label>
+<br>
+<label class="radio">
+  <input type="radio" name="rad1" value="b" checked>
+  <i></i> Radio 2
+</label>
