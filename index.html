@@ -1,0 +1,33 @@
+<script src="https://unpkg.com/focus-visible@latest/dist/focus-visible.min.js"></script>
+<style>
+  button {
+    width: 100;
+    height: 50;
+    border-image-source: url(buttonDefault.png);
+    border-image-width: 1px;
+    border-image-slice: fill 1 1 1 1;
+  }
+
+  button:hover {
+    border-image-source: url(buttonHover.png);
+  }
+
+  button:active {
+    border-image-source: url(buttonClick.png);
+  }
+
+  *:focus:not(.focus-visible) {
+    outline: none;
+  }
+
+  .focus-visible {
+    outline: 1;
+    outline-color: black;
+    outline-style: dotted;
+    outline-offset: -3px;
+  }
+</style>
+
+<button>Hello World!</button>
+
+<button>Click!</button>
