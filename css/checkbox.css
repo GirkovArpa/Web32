@@ -51,13 +51,13 @@
 }
 
 .checkbox > input:checked + i:after {
-  background-image: url(img/checkbox/checkDefaultFilled.png);
+  background-image: url(../img/checkbox/checkDefaultFilled.png);
 }
 
 .checkbox > input:checked:hover + i:after {
-  background-image: url(img/checkbox/checkHoverFilled.png);
+  background-image: url(../img/checkbox/checkHoverFilled.png);
 }
 
 .checkbox > input:checked:active + i:after {
-  background-image: url(img/checkbox/checkClickFilled.png);
+  background-image: url(../img/checkbox/checkClickFilled.png);
 }
