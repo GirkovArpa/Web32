@@ -1,46 +1,72 @@
-<link rel="stylesheet" type="text/css" href="css/body.css">
-<link rel="stylesheet" type="text/css" href="css/button.css">
-<link rel="stylesheet" type="text/css" href="css/radio.css">
-<link rel="stylesheet" type="text/css" href="css/checkbox.css">
-<link rel="stylesheet" type="text/css" href="css/textbox.css">
-<link rel="stylesheet" type="text/css" href="css/password.css">
-<link rel="stylesheet" type="text/css" href="css/slider.css">
-<!--<script src="https://unpkg.com/focus-visible@latest/dist/focus-visible.min.js"></script>-->
+<!DOCTYPE html>
+<header>
+  <title>
+    Web32 Demo
+  </title>
+  <link rel="stylesheet" type="text/css" href="css/body.css">
+  <link rel="stylesheet" type="text/css" href="css/button.css">
+  <link rel="stylesheet" type="text/css" href="css/radio.css">
+  <link rel="stylesheet" type="text/css" href="css/checkbox.css">
+  <link rel="stylesheet" type="text/css" href="css/textbox.css">
+  <link rel="stylesheet" type="text/css" href="css/password.css">
+  <link rel="stylesheet" type="text/css" href="css/slider.css">
+  <!--<script src="https://unpkg.com/focus-visible@latest/dist/focus-visible.min.js"></script>-->
+</header>
 
-<label class="radio">
-  <input type="radio" name="rad1" value="a">
-  <i></i> Radio 1
-</label>
-<br>
-<label class="radio">
-  <input type="radio" name="rad1" value="b" checked>
-  <i></i> Radio 2
-</label>
+<body>
+  <div id="preload"></div>
+  <script src="js/preload.js"></script>
 
-<button>Button 1</button>
-<br>
-<button>Button 2</button>
+  <label class="radio">
+    <input type="radio" name="group1">
+    <i></i> The below sentence is false
+  </label>
+  <br>
+  <label class="radio">
+    <input type="radio" name="group1" checked>
+    <i></i> The above sentence is true
+  </label>
 
-<br>
+  <br><br>
 
-<label class="checkbox">
-  <input type="checkbox" name="ckb1" value="a" checked>
-  <i></i> Checkbox 1
-</label>
-<label class="checkbox">
-  <input type="checkbox" name="ckb2" value="b">
-  <i></i> Checkbox 2
-</label>
+  <button>Okay</button>
+  &nbsp;
+  <button>Cancel</button>
 
-<br>
+  <br><br>
 
-<input type="text">
-<br><br>
-<input type="password">
+  <label class="checkbox">
+    <input type="checkbox">
+    <i></i> Pepperoni
+  </label>
+  &nbsp;
+  <label class="checkbox">
+    <input type="checkbox" checked>
+    <i></i> Pineapple
+  </label>
 
-<br>
-<br>
-<br>
+  <br><br>
 
-<input type="range">
+  <label>Name:
+  <input type="text">
+  </label>
+  <br><br>
+  <label>Password:
+  <input type="password">
+  </label>
 
+  <br><br>
+
+  <script>
+    const sliderOnInput = slider => document.getElementById('badly').innerHTML = 
+    slider.value < 100 ? slider.value : Infinity;
+  </script>
+  <label id="sliderLabel">On a scale from 1 to 10, how badly do you want to pet this fat chinchilla?&nbsp;<span id="badly">1</span>
+  <input type="range" min="1" max="100" value="1" step="1" oninput="sliderOnInput(this)">
+  </label>
+
+  <br><br>
+
+  <img src="img/chinchilla.png">
+</body>
+</html>

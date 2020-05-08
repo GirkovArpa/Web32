@@ -4,6 +4,7 @@
    border-image-source: url(../img/button/buttonDefault.png);
    border-image-width: 1px;
    border-image-slice: fill 1 1 1 1;
+   padding: 5px 20px 5px 20px;
  }
  
  button:hover {
@@ -12,7 +13,6 @@
  
  button:active {
    border-image-source: url(../img/button/buttonClick.png);
-   padding: 0px;
  }
  
  :focus:not(.focus-visible) {
