@@ -1,111 +1,8 @@
-<!--<script src="https://unpkg.com/focus-visible@latest/dist/focus-visible.min.js"></script>-->
-<style>
-  body {
-    background-color: #F0F0F0;
-  }
-
-  button {
-    width: 100;
-    height: 50;
-    border-image-source: url(buttonDefault.png);
-    border-image-width: 1px;
-    border-image-slice: fill 1 1 1 1;
-  }
-
-  button:hover {
-    border-image-source: url(buttonHover.png);
-  }
-
-  button:active {
-    border-image-source: url(buttonClick.png);
-  }
-
-  /**:focus:not(.focus-visible) {
-    outline: none;
-  }
-
-  .focus-visible {
-    outline: 1;
-    outline-color: black;
-    outline-style: dotted;
-    outline-offset: -3px;
-  }*/
-
-  /** RADIO */
-
-  /* CUSTOM RADIO & CHECKBOXES
-   http://stackoverflow.com/a/17541916/383904 */
-  .radio {
-    user-select: none;
-    -webkit-user-select: none;
-    -webkit-touch-callout: none;
-  }
-
-  .radio>input {
-    /* HIDE ORG RADIO & CHECKBOX */
-    position: absolute;
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-
-  /* RADIO & CHECKBOX STYLES */
-  /* DEFAULT <i> STYLE */
-  .radio>i {
-    display: inline-block;
-    vertical-align: middle;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    box-shadow: inset 0 0 0 8px #fff;
-    border: 1px solid gray;
-    background: gray;
-  }
-
-
-  .radio:hover>i {
-    /* HOVER <i> STYLE */
-    border-color: #26A0DA;
-  }
-
-  .radio:hover:checked>i {
-    background: #26A0DA;
-  }
-
-  .radio>input:active+i {
-    border-color: #2C628B;
-  }
-
-  /*.radio>input:active:checked+i {
-    border-color: #2C628B;
-  }*/
-
-  .radio>input:active:checked+i {
-    border-color: #2C628B;
-  }
-
-  .radio>input:checked:not(:active)+i {
-    /* (RADIO CHECKED) <i> STYLE */
-    box-shadow: inset 0 0 0 2px #fff;
-    background: #202020;
-  }
-
-  .radio>input:checked:active+i {
-    box-shadow: inset 0 0 0 2px #fff;
-    background: #2C628B;
-  }
-
-  .radio>input:checked:hover+i {
-    box-shadow: inset 0 0 0 2px #fff;
-    background: #2C628B;
-  }
-
-  .radio>input:checked:hover:not(:active)+i {
-    box-shadow: inset 0 0 0 2px #fff;
-    background: #26A0DA;
-  }
-</style>
-
+<link rel="stylesheet" type="text/css" href="body.css">
+<link rel="stylesheet" type="text/css" href="button.css">
+<link rel="stylesheet" type="text/css" href="radio.css">
+<link rel="stylesheet" type="text/css" href="checkbox.css">
+<script src="https://unpkg.com/focus-visible@latest/dist/focus-visible.min.js"></script>
 
 <label class="radio">
   <input type="radio" name="rad1" value="a">
@@ -115,4 +12,19 @@
 <label class="radio">
   <input type="radio" name="rad1" value="b" checked>
   <i></i> Radio 2
+</label>
+
+<button>Button 1</button>
+<br>
+<button>Button 2</button>
+
+<br>
+
+<label class="checkbox">
+  <input type="checkbox" name="ckb1" value="a" checked>
+  <i></i> Checkbox 1
+</label>
+<label class="checkbox">
+  <input type="checkbox" name="ckb2" value="b">
+  <i></i> Checkbox 2
 </label>
