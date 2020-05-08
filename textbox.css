@@ -1,0 +1,13 @@
+input[type="text"] {
+  border-width: 1px;
+  border-color: #707070;
+  border-style: solid;
+}
+
+input[type="text"]:hover:not(:active):not(:focus) {
+  border-color: #26A0DA;
+}
+
+input[type="text"]:active, input[type="text"]:focus {
+  border-color: #2C628B;
+}
