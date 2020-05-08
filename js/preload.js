@@ -9,6 +9,8 @@ const preloadImages = function (...imgUrls) {
 }
 
 preloadImages(
+  'img/button/buttonHover.png',
+  'img/button/buttonClick.png',
   'img/checkbox/checkDefaultFilled.png',
   'img/checkbox/checkHoverFilled.png',
   'img/checkbox/checkClickFilled.png',
