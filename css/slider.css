@@ -2,6 +2,13 @@ input[type=range] {
   -webkit-appearance: none;
   width: 100%;
 }
+/*
+input[type=range]:active {
+  outline: dotted;
+  outline-width: 1px;
+  outline-color: black;
+  outline-offset: 6px;
+}*/
 
 input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;

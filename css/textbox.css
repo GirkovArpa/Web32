@@ -10,4 +10,5 @@ input[type="text"]:hover:not(:active):not(:focus) {
 
 input[type="text"]:active, input[type="text"]:focus {
   border-color: #2C628B;
+  outline: none;
 }
